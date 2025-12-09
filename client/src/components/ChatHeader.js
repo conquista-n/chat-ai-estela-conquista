@@ -8,8 +8,8 @@ function ChatHeader({ onClearChat }) {
       <div className="d-flex justify-content-between align-items-center">
         <div>
           <h4 className="mb-1">
-            <img className="agent-icon" alt="" src="/images/avatar-chat-estela"></img>
-            Assitente Estela
+            <img className="agent-icon" alt="" src="/images/avatar-chat-estela.png"></img>
+            Estela
           </h4>
           <p className="subtitle mb-0">Assistente inteligente da Conquista</p>
         </div>

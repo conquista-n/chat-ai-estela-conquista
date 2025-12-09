@@ -13,14 +13,17 @@ function App() {
   const [error, setError] = useState(null);
   const messagesEndRef = useRef(null);
 
-  // Auto scroll para a última mensagem
+  // Auto scroll para a última mensagem apenas quando há nova mensagem
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   };
 
+  // Só faz auto-scroll quando adiciona nova mensagem, não o tempo todo
   useEffect(() => {
-    scrollToBottom();
-  }, [messages]);
+    if (messages.length > 0) {
+      scrollToBottom();
+    }
+  }, [messages.length]); // Mudou de [messages] para [messages.length]
 
   // Verificar se o backend está online ao carregar
   useEffect(() => {

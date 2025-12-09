@@ -95,7 +95,7 @@ app.post('/api/chat', async (req, res) => {
     const payload = {
       streaming: streaming,
       user_prompt: message,
-      stackspot_knowledge: false,
+      stackspot_knowledge: true,
       return_ks_in_response: true,
       use_conversation: true
     };
@@ -124,11 +124,19 @@ app.post('/api/chat', async (req, res) => {
 
     const data = await response.json();
     console.log('✅ Resposta recebida do agente');
+    console.log('📦 Dados completos:', JSON.stringify(data, null, 2));
+
+    // Extrair a resposta correta - StackSpot usa o campo "message"
+    const answer = data.message || data.answer || data.response || data.result || 'Resposta recebida';
+    
+    console.log('💬 Resposta extraída:', answer);
 
     res.json({
-      answer: data.answer || data.response || 'Resposta recebida',
-      conversationId: data.conversation_id,
-      knowledgeSources: data.knowledge_sources || []
+      answer: answer,
+      conversationId: data.conversation_id || data.conversationId,
+      knowledgeSources: data.source || data.knowledge_sources || [],
+      messageId: data.message_id,
+      tokens: data.tokens
     });
 
   } catch (error) {

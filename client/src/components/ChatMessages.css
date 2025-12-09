@@ -1,10 +1,12 @@
 .chat-messages-container {
   padding: 20px;
   overflow-y: auto;
+  overflow-x: hidden;
   height: 100%;
   display: flex;
   flex-direction: column;
   gap: 15px;
+  overflow-y: auto;
 }
 
 /* Mensagem de boas-vindas */
@@ -84,6 +86,7 @@
 
 .message-header strong {
   font-weight: 600;
+  overflow-y: auto;
 }
 
 .message-time {

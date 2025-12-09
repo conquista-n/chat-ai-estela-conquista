@@ -12,11 +12,12 @@
 }
 
 .agent-icon {
-  width: 24px;   /* largura do ícone */
-  height: 24px;  /* altura do ícone */
+  width: 35px;   /* largura do ícone */
+  height: 35px;  /* altura do ícone */
   margin-right: 8px; /* espaço entre a imagem e o texto */
   border-radius: 50%; /* deixa redondo, estilo avatar */
   object-fit: cover;  /* garante que a imagem se ajuste sem distorcer */
+   image-rendering: auto;
 }
 
 .subtitle {
