@@ -1,8 +1,7 @@
 .chat-messages-container {
   padding: 20px;
-  overflow-y: auto;
-  overflow-x: hidden;
   height: 100%;
+  max-height: 400px;
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -130,6 +129,30 @@
   width: 8px;
   height: 8px;
   background-color: var(--primary-green);
+}
+
+.agent-icon {
+  width: 35px;   /* largura do ícone */
+  height: 35px;  /* altura do ícone */
+  margin-right: 8px; /* espaço entre a imagem e o texto */
+  border-radius: 50%; /* deixa redondo, estilo avatar */
+  object-fit: cover;  /* garante que a imagem se ajuste sem distorcer */
+  vertical-align: middle;
+}
+
+.user-icon{
+  width: 35px;   /* largura do ícone */
+  height: 35px;  /* altura do ícone */
+  margin-right: 8px; /* espaço entre a imagem e o texto */
+  border-radius: 50%; /* deixa redondo, estilo avatar */
+  object-fit: cover;  /* garante que a imagem se ajuste sem distorcer */
+  vertical-align: middle;
+}
+
+.sender-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
 }
 
 /* Animações */

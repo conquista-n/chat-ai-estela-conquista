@@ -28,8 +28,8 @@ function ChatMessages({ messages, isLoading, messagesEndRef }) {
             >
               <div className={`message-bubble ${message.sender} ${message.isError ? 'error' : ''}`}>
                 <div className="message-header">
-                  <strong>
-                    {message.sender === 'user' ? '👤 Você' : '✨ Estela'}
+                  <strong className="sender-label">
+                    {message.sender === 'user' ? (<><img src="/images/user-avatar.png" className="user-icon"/>Você</>) : (<><img src="/images/avatar-chat-estela.png" className="agent-icon"/>Estela</>)}
                   </strong>
                   <span className="message-time">{formatTime(message.timestamp)}</span>
                 </div>
