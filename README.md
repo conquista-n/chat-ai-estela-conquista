@@ -1,6 +1,6 @@
 # StackSpot AI Chat
 
-Interface de chat web para interagir com agentes da StackSpot AI, construída com React e Node.js.
+Interface de chat web para interagir com agentes AI da Conquista Negócios na Stackspot, construída com React e Node.js.
 
 ## 🚀 Tecnologias
 

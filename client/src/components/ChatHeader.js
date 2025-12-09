@@ -8,10 +8,10 @@ function ChatHeader({ onClearChat }) {
       <div className="d-flex justify-content-between align-items-center">
         <div>
           <h4 className="mb-1">
-            <span className="robot-icon">🤖</span>
-            Chat com Estela - Conquista
+            <img className="agent-icon" alt="" src="/images/avatar-chat-estela"></img>
+            Assitente Estela
           </h4>
-          <p className="subtitle mb-0">Assistente inteligente da COnquista</p>
+          <p className="subtitle mb-0">Assistente inteligente da Conquista</p>
         </div>
         <Button 
           variant="outline-light" 

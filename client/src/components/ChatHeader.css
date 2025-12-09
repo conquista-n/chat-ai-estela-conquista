@@ -11,9 +11,12 @@
   margin: 0;
 }
 
-.robot-icon {
-  font-size: 28px;
-  margin-right: 10px;
+.agent-icon {
+  width: 24px;   /* largura do ícone */
+  height: 24px;  /* altura do ícone */
+  margin-right: 8px; /* espaço entre a imagem e o texto */
+  border-radius: 50%; /* deixa redondo, estilo avatar */
+  object-fit: cover;  /* garante que a imagem se ajuste sem distorcer */
 }
 
 .subtitle {
