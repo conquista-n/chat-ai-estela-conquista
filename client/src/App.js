@@ -32,7 +32,7 @@ function App() {
 
   const checkBackendHealth = async () => {
     try {
-      const response = await axios.get('/api/health');
+      const response = await axios.get(`${process.env.REACT_APP_API_URL || ''}/api/health`);
       console.log('✅ Backend conectado:', response.data);
     } catch (error) {
       console.error('❌ Backend offline:', error);
@@ -56,7 +56,7 @@ function App() {
     setError(null);
 
     try {
-      const response = await axios.post('/api/chat', {
+      const response = await axios.post(`${process.env.REACT_APP_API_URL || ''}/api/chat`, {
         message: userMessage,
         conversationId: conversationId
       });
